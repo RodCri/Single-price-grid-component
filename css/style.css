@@ -1,0 +1,105 @@
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content__price{
+    width: 60%;
+    height: 70%;
+    display: grid;
+    background-color: whitesmoke;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(2, 50%);
+}
+.content__price-info{
+    grid-row: 1 / 1;
+    grid-column: 1 / span 2;
+    background-color: white;
+    padding: 3em 3em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;   
+}
+.content__price-info h2{
+    color: var(--cyan);
+    padding-bottom: 1em;
+}
+.content__price-info p:nth-child(2){
+    color: var(--bright-yellow);
+    font-weight: 700;
+    padding-bottom: .5em;
+}
+.content__price-info p:nth-child(3){
+    color: var(--grayish-blue);
+    line-height: 1.5em;
+}
+
+.content__price-subscription{
+    grid-row: 2 / 2;
+    grid-column: 1 / 1;
+    background-color: var(--cyan);
+    padding: 2em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 1em;
+}
+.content__price-subscription h3{
+    padding-bottom: 1em;
+}
+.content__price-subscription p:nth-child(2){
+    font-size: 2em;
+    font-weight: 700;
+    padding-bottom: .3em;
+}
+.content__price-subscription p:nth-child(2) > span{
+    font-size: .5em;
+    font-weight: 400;
+    color: var(--light-gray);
+}
+a{
+    margin: 1em 0;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    border-radius: .5em;
+    background-color: var(--bright-yellow);
+    text-align: center;
+    width: 70%;
+}
+
+.content__price-whyus{
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+    background-color: #4abebd;
+    padding: 2em;
+    color: white;
+    border-bottom-right-radius: 1em;
+}
+.content__price-whyus h3{
+    padding-bottom: 1em;
+}
+li{
+    list-style: none;
+    font-size: .8em;
+    line-height: 1.5em;
+    color: #ececec;
+}
